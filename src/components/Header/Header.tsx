@@ -2,15 +2,20 @@ import Link from "next/link"
 import Image from "next/image"
 
 import styles from './header.module.scss'
+import Search from "../Search/Search"
 
 const Header = () => {
   return (
     <header className={styles.container}>
       <div className={styles.header}>
-        <Link href='/'>
-          <Image src='icons/Gushop.svg' alt="Gushop" width={93} height={40}/>
-        </Link>
+        <div className={styles.searchBlock}>
+          <Link href='/'>
+            <Image src='icons/Gushop.svg' alt="Gushop" width={93} height={40}/>
+          </Link>
 
+          <Search />
+
+        </div>
         <Link href='/favourites'>
           <div className={styles.favourites}>
             <Image src='icons/Like.svg' alt="Like" width={20} height={20}/>

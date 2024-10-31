@@ -1,8 +1,15 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #E2E8F0;
-  padding: 16px 150px;
+  padding: 12px 200px;
+}
+
+.searchBlock {
+  display: flex;
+  align-items: center;
+  gap: 125px;
 }
 
 .favourites {
@@ -18,6 +25,10 @@
   align-items: center;
   gap: 32px;
   border-bottom: 1px solid #E2E8F0;
-  padding: 16px 150px;
+  padding: 12px 200px;
   list-style-type: none;
+  
+  li {
+    cursor: pointer;
+  }
 }
