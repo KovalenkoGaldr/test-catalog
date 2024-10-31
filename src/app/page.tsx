@@ -2,6 +2,7 @@ import axios from "axios";
 
 import { IProductListProps } from "@/types";
 import ProductList from "@/components/ProductList/ProductList";
+import Filters from "@/components/Filters/Filters";
 
 import styles from "./page.module.css";
 
@@ -17,7 +18,8 @@ export default async function Products() {
   }
 
   return (
-    <div>
+    <div className={styles.productsPage}>
+      <Filters />
       <ProductList products={products}/>
     </div>
   );

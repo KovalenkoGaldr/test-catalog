@@ -1,47 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@400;700&display=swap');
-
 .productCard {
   border: 1px solid #e0e0e0;
-  padding: 15px 17px;
+  padding: 10px 17px 15px;
   width: 250px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  position: relative;
-  text-align: center;
+  justify-content: space-between;
+}
+
+.topCard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.textCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
 }
 
 .category {
-  font-family: 'Satoshi', sans-serif;
   font-size: 14px;
   color: #999;
-  text-transform: uppercase;
-  margin-bottom: 8px;
+  text-transform: lowercase;
 }
 
 .favoriteButton {
   width: 20px;
   height: 20px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
   background: none;
   border: none;
   font-size: 20px;
   cursor: pointer;
-}
-
-.productImage {
-  width: 100%;
-  height: auto;
-  margin-bottom: 8px;
+  margin: 10px 10px 0 0;
 }
 
 .title {
-  font-family: 'Satoshi', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 18.9px;
   font-weight: 500;
-  margin: 8px 0;
+}
+
+.image {
+  object-fit: 'contain';
+  margin: 40px auto;
 }
 
 .price {
