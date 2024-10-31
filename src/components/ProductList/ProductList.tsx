@@ -5,6 +5,7 @@ import { IProductListProps } from '@/types';
 import ProductCard from '../ProductCard/ProductCard';
 
 import styles from './productList.module.scss'
+import Link from 'next/link';
 
 const ProductList = ({ products }: IProductListProps) => {
   const [sortedProducts, setSortedProducts] = useState(products);
@@ -36,7 +37,9 @@ const ProductList = ({ products }: IProductListProps) => {
       </div>
       <div className={styles.list}>
         {sortedProducts.map(product => (
-          <ProductCard key={product.id} {...product} />
+          <Link href={`/products/${product.id}`}>
+            <ProductCard key={product.id} {...product} />
+          </Link>
         ))}
       </div>
     </div>

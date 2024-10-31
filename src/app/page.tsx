@@ -4,14 +4,14 @@ import { IProductListProps } from "@/types";
 import ProductList from "@/components/ProductList/ProductList";
 import Filters from "@/components/Filters/Filters";
 
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 
 export default async function Products() {
   let products: IProductListProps["products"] = [];
 
   try {
-    const response = await axios.get('https://fakestoreapi.com/products');
-    products = response.data;
+    const { data } = await axios.get('https://fakestoreapi.com/products');
+    products = data;
   } catch (err) {
     console.error('Error: ', err);
     products = [];
@@ -19,7 +19,6 @@ export default async function Products() {
 
   return (
     <div className={styles.productsPage}>
-      <Filters />
       <ProductList products={products}/>
     </div>
   );
